@@ -1,0 +1,200 @@
+/* ==============================================
+   ESTILOS GENERALES
+   ============================================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Fondo gris muy claro */
+  color: #333;               /* Color de texto principal */
+  text-align: center;
+}
+
+/* ==============================================
+   ENCABEZADO
+   ============================================== */
+header {
+  background-color: #1a3c5e; /* Azul marino oscuro */
+  color: white;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.eslogan {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* ==============================================
+   NAVEGACIÓN
+   ============================================== */
+nav {
+  background-color: #e0e0e0;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a3c5e;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #1a3c5e;
+  color: white;
+}
+
+/* ==============================================
+   SECCIONES DE SERVICIO (tarjetas)
+   ============================================== */
+.servicio {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+/* Colores distintivos para cada servicio (como en el volante) */
+#transito h2 {
+  color: #e74c3c; /* Rojo */
+}
+
+#soat h2 {
+  color: #8e44ad; /* Morado */
+}
+
+#dian h2 {
+  color: #2c3e50; /* Azul oscuro */
+}
+
+.lema {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #8e44ad;
+}
+
+/* ==============================================
+   OTROS SERVICIOS
+   ============================================== */
+#otros {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+#otros ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+/* ==============================================
+   PIE DE PÁGINA
+   ============================================== */
+footer {
+  background-color: #1a3c5e;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 1.1em;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* ==============================================
+   TARJETAS ENLAZADAS
+   ============================================== */
+
+/* Quitamos el subrayado y color por defecto del enlace */
+a.servicio-link {
+  text-decoration: none;
+  color: inherit; /* hereda el color del texto, así no se vuelve azul */
+  display: block;
+  max-width: 600px;
+  margin: 30px auto; /* centrado igual que las tarjetas antes */
+}
+
+/* La tarjeta interna (div.servicio) mantiene el estilo de antes */
+.servicio {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: left; /* o center, como prefieras */
+}
+
+/* Efecto al pasar el ratón: se levanta ligeramente */
+a.servicio-link:hover .servicio {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Los colores de los títulos se mantienen (estaban definidos por id) */
+/* Si usaste #transito h2, etc., seguirán funcionando porque ahora el id está en el enlace */
+#transito h2 {
+  color: #e74c3c;
+}
+#soat h2 {
+  color: #8e44ad;
+}
+#dian h2 {
+  color: #2c3e50;
+}
+
+/* ==============================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ============================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;  /* Verde WhatsApp */
+  color: white;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  background-color: #1ebe5c;
+}
+
+/* Ajuste adicional para el SVG */
+.whatsapp-float svg {
+  fill: white;        /* Asegura que el icono sea blanco */
+  width: 32px;        /* Tamaño cómodo */
+  height: 32px;
+}

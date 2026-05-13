@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Rutas con res.render
 app.get('/', (req, res) => {
-  res.render('inicio', { titulo: 'Inicio', paginaAcutual: 'inicio' });
+  res.render('inicio', { titulo: 'Inicio', paginaActual: 'inicio' });
 });
 
 app.get('/transito', (req, res) => {

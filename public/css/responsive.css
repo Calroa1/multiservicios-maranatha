@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+  .servicios-grid {
+    gap: 20px;
+    margin: 25px auto;
+    padding: 0 15px;
+  }
+  .tarjeta-servicio {
+    padding: 2rem 1rem;
+  }
+  .tarjeta-icono {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,50 @@
+<%- include('partials/head', { titulo: titulo }) %>
+<%- include('partials/header', { paginaActual: paginaActual }) %>
+
+<!-- ========== CONTENIDO ÚNICO DE INICIO ========== -->
+<section class="servicios-grid">
+  
+  <!-- Tarjeta Tránsito -->
+  <a href="/transito" class="tarjeta-servicio" id="tarjeta-transito">
+    <div class="tarjeta-icono">🚗</div>
+    <h2>Trámites de Tránsito</h2>
+    <p>Liquidación de impuestos y comparendos de manera ágil.</p>
+    <ul class="tarjeta-detalles">
+      <li>Impuestos vehiculares</li>
+      <li>Comparendos</li>
+    </ul>
+    <span class="tarjeta-accion">Más información →</span>
+  </a>
+
+  <!-- Tarjeta SOAT -->
+  <a href="/soat" class="tarjeta-servicio" id="tarjeta-soat">
+    <div class="tarjeta-icono">🛡️</div>
+    <h2>Punto de Venta SOAT</h2>
+    <p>Ágil + Confiable + Fácil. Asegura tu vehículo hoy.</p>
+    <ul class="tarjeta-detalles">
+      <li>Cobertura inmediata</li>
+      <li>Todo tipo de vehículos</li>
+    </ul>
+    <span class="tarjeta-accion">Más información →</span>
+  </a>
+
+  <!-- Tarjeta DIAN -->
+  <a href="/dian" class="tarjeta-servicio" id="tarjeta-dian">
+    <div class="tarjeta-icono">📄</div>
+    <h2>Trámites DIAN</h2>
+    <p>Documento RUT primera vez y actualización.</p>
+    <ul class="tarjeta-detalles">
+      <li>Inscripción y cambios</li>
+      <li>Asesoría tributaria</li>
+    </ul>
+    <span class="tarjeta-accion">Más información →</span>
+  </a>
+
+</section>
+
+<section id="otros">
+  <!-- ... -->
+</section>
+<!-- ========== FIN CONTENIDO ========== -->
+
+<%- include('partials/footer') %>

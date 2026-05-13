@@ -1,0 +1,16 @@
+<nav class="navegacion-principal">
+  <div class="contenedor-nav">
+    <!-- Logo + nombre a la izquierda -->
+    <a href="/" class="logo-nav">
+      <img src="/img/logo.png" alt="Logo Maranatha">
+      <span>Multiservicios Maranatha</span>
+    </a>
+    <!-- Enlaces a la derecha -->
+    <ul class="menu-enlaces">
+      <li><a href="/" class="<%= paginaActual === 'inicio' ? 'activo' : '' %>">Inicio</a></li>
+      <li><a href="/transito" class="<%= paginaActual === 'transito' ? 'activo' : '' %>">Tránsito</a></li>
+      <li><a href="/soat" class="<%= paginaActual === 'soat' ? 'activo' : '' %>">SOAT</a></li>
+      <li><a href="/dian" class="<%= paginaActual === 'dian' ? 'activo' : '' %>">DIAN</a></li>
+    </ul>
+  </div>
+</nav>

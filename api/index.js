@@ -2,25 +2,28 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Servir archivos estáticos desde la carpeta 'public'
+// Configurar EJS (ruta relativa desde api/ hacia views/)
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '..', 'views'));
+
+// Servir archivos estáticos (CSS, imágenes) desde public/
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-// Rutas personalizadas (las mismas que ya tenías)
+// Rutas con res.render
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'inicio.html'));
+  res.render('inicio', { titulo: 'Inicio' });
 });
 
 app.get('/transito', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'transito.html'));
+  res.render('transito', { titulo: 'Trámites de Tránsito' });
 });
 
 app.get('/soat', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'soat.html'));
+  res.render('soat', { titulo: 'Punto de Venta SOAT' });
 });
 
 app.get('/dian', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'dian.html'));
+  res.render('dian', { titulo: 'Trámites DIAN' });
 });
 
-// Exportamos la app para que Vercel la convierta en función serverless
 module.exports = app;

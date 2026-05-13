@@ -236,3 +236,9 @@ a.servicio-link:hover .servicio {
     font-size: 0.9em;
   }
 }
+
+nav a.activo {
+  background-color: #1a3c5e;
+  color: white !important;
+  font-weight: bold;
+}

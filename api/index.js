@@ -11,19 +11,19 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Rutas con res.render
 app.get('/', (req, res) => {
-  res.render('inicio', { titulo: 'Inicio' });
+  res.render('inicio', { titulo: 'Inicio', paginaAcutual: 'inicio' });
 });
 
 app.get('/transito', (req, res) => {
-  res.render('transito', { titulo: 'Trámites de Tránsito' });
+  res.render('transito', { titulo: 'Trámites de Tránsito', paginaActual: 'transito' });
 });
 
 app.get('/soat', (req, res) => {
-  res.render('soat', { titulo: 'Punto de Venta SOAT' });
+  res.render('soat', { titulo: 'Punto de Venta SOAT', paginaActual: 'soat' });
 });
 
 app.get('/dian', (req, res) => {
-  res.render('dian', { titulo: 'Trámites DIAN' });
+  res.render('dian', { titulo: 'Trámites DIAN', paginaActual: 'dian'  });
 });
 
 module.exports = app;
